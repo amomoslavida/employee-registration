@@ -1,0 +1,47 @@
+/* App.css */
+
+.App-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.App-container input[type="text"],
+.App-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+.App-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.App-container input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.App-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.agree-terms {
+  margin: 10px;
+}

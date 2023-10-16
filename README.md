@@ -1,3 +1,6 @@
+## React-based frontend for the Helmes recruitment task
+
+
 ## Available Scripts
 
 In the project directory, you can run:

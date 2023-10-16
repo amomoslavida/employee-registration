@@ -71,7 +71,7 @@ function App() {
     useEffect(() => {
         const FetchSectors = async () => {
             try {
-                const response = await axios.get('https://localhost:7194/FetchAllSectorsAsJson');
+                const response = await axios.get('https://localhost:7065/FetchAllSectorsAsJson');
                 buildNodes(response.data);
             } catch (error) {
                 console.error('Error fetching todos:', error);
@@ -103,13 +103,13 @@ function App() {
         console.log(isUpdate);
         if(isUpdate) {
           setIsUpdate(false);
-          const response = await axios.post('https://localhost:7194/editEmployee', {
+          const response = await axios.post('https://localhost:7065/editEmployee', {
             
             employeeID : employeeIDToUpdate,
             NewEmployeeName: name,
             NewSectorID: selectedKey
         }); 
-        if(response.status == 200) {
+        if(response.status === 200) {
           fetchEmployees();
         }
         } else {
@@ -118,7 +118,7 @@ function App() {
             return;
         }
         try {
-            const response = await axios.post('https://localhost:7194/SaveEmployee', {
+            const response = await axios.post('https://localhost:7065/SaveEmployee', {
                 StoredProcedure: "InsertEmployee",
                 EmployeeName: name,
                 SectorID: selectedKey
@@ -145,7 +145,7 @@ function App() {
 
     const fetchEmployees = async () => {
       try {
-          const response = await axios.get('https://localhost:7194/GetEmployeeDetailsAsJSON');
+          const response = await axios.get('https://localhost:7065/GetEmployeeDetailsAsJSON');
           setEmployees(JSON.parse(response.data));
       } catch (error) {
           console.error('Error fetching employees:', error);
